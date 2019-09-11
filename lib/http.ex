@@ -10,10 +10,10 @@ defmodule Http do
 
   def accept(socket, dispatch) do
     {:ok, request} = :gen_tcp.accept(socket)
-    
+
     spawn(fn ->
       dispatch.(request)
-      end)
+    end)
 
     accept(socket, dispatch)
   end

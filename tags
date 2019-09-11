@@ -749,7 +749,7 @@ Parsers	deps/plug/lib/plug/parsers.ex	/^defmodule Plug.Parsers do$/;"	m
 Plug	deps/plug/README.md	/^# Plug$/;"	c
 Plug	deps/plug/lib/plug.ex	/^defmodule Plug do$/;"	m
 Plug.Crypto	deps/plug_crypto/README.md	/^# Plug.Crypto$/;"	c
-PlugAdapter	lib/http/adapter.ex	/^defmodule Http.PlugAdapter do #Plugadapter for current_time.ex$/;"	m
+PlugAdapter	lib/http/adapter.ex	/^defmodule Http.PlugAdapter do$/;"	m
 PlugCowboy	deps/plug_cowboy/README.md	/^# PlugCowboy$/;"	c
 PlugUsingHalt	deps/plug/lib/plug/builder.ex	/^      defmodule PlugUsingHalt do$/;"	m
 PlugWithCustomCall	deps/plug/lib/plug/builder.ex	/^      defmodule PlugWithCustomCall do$/;"	m
@@ -2342,7 +2342,7 @@ call	deps/plug/lib/plug/ssl.ex	/^  def call(conn, {hsts, exclude, host, rewrites
 call	deps/plug/lib/plug/static.ex	/^  def call($/;"	f	module:InvalidPathError	access:public
 call	deps/plug/lib/plug/static.ex	/^  def call(conn, _options) do$/;"	f	module:InvalidPathError	access:public
 call	deps/plug/lib/plug/telemetry.ex	/^  def call(conn, {start_event, stop_event, opts}) do$/;"	f	module:InstrumentedPlug	access:public
-call	lib/current_time.ex	/^  def call(conn, _opts) do # call\/2 $/;"	f	module:CurrentTime	access:public
+call	lib/current_time.ex	/^  def call(conn, _opts) do$/;"	f	module:CurrentTime	access:public
 call_result	deps/cowboy/src/cowboy_websocket.erl	/^-type call_result(State) :: {commands(), State} | {commands(), State, hibernate}.$/;"	t
 cancel_timeout	deps/cowboy/src/cowboy_http.erl	/^cancel_timeout(State=#state{timer=TimerRef}) ->$/;"	f	module:cowboy_http
 capitalize_token	deps/cowboy/src/cowboy_bstr.erl	/^capitalize_token(<< $-, Rest\/bits >>, _, Acc) ->$/;"	f	module:cowboy_bstr
@@ -3385,7 +3385,7 @@ digit_chars	deps/cowlib/src/cow_http_hd.erl	/^digit_chars() -> "0123456789".$/;"
 disallowed_listen_options	deps/ranch/src/ranch_ssl.erl	/^disallowed_listen_options() ->$/;"	f	module:ranch_ssl
 disallowed_listen_options	deps/ranch/src/ranch_tcp.erl	/^disallowed_listen_options() ->$/;"	f	module:ranch_tcp
 dispatch	deps/plug/lib/plug/router.ex	/^      def dispatch(%Plug.Conn{} = conn, opts) do$/;"	f	module:AppRouter	access:public
-dispatch	lib/http/adapter.ex	/^  def dispatch(request, plug) do #pass to current_time.ex(plug)$/;"	f	module:PlugAdapter	access:public
+dispatch	lib/http/adapter.ex	/^  def dispatch(request, plug) do$/;"	f	module:PlugAdapter	access:public
 dispatch_event	deps/cowlib/src/cow_sse.erl	/^dispatch_event(State=#state{last_event_id=LastEventID, data=[]}) ->$/;"	f	module:cow_sse
 dispatch_event	deps/cowlib/src/cow_sse.erl	/^dispatch_event(State=#state{last_event_id=LastEventID,$/;"	f	module:cow_sse
 dispatch_event	deps/cowlib/src/cow_sse.erl	/^dispatch_event(State=#state{last_event_id_set=false, data=[]}) ->$/;"	f	module:cow_sse
@@ -4341,7 +4341,7 @@ headers	deps/cowlib/src/cow_http_hd.erl	/^headers() ->$/;"	f	module:cow_http_hd
 headers	deps/cowlib/src/cow_multipart.erl	/^-type headers() :: [{iodata(), iodata()}].$/;"	t
 headers	deps/plug/lib/plug/conn.ex	/^  @type headers :: [{binary, binary}]$/;"	y	module:Conn	access:public
 headers	deps/plug/src/plug_multipart.erl	/^-type headers() :: [{iodata(), iodata()}].$/;"	t
-headers	lib/http/adapter.ex	/^  defp headers(headers) do$/;"	f	module:PlugAdapter	access:private
+headers	lib/http/adapter.ex	/^  defp headers(headers) do #private functions for send_resp$/;"	f	module:PlugAdapter	access:private
 headers_decode	deps/cowlib/src/cow_http2_machine.erl	/^headers_decode(Frame=#headers{head=head_fin, data=HeaderData},$/;"	f	module:cow_http2_machine
 headers_enforce_concurrency_limit	deps/cowlib/src/cow_http2_machine.erl	/^headers_enforce_concurrency_limit(Frame=#headers{id=StreamID},$/;"	f	module:cow_http2_machine
 headers_frame	deps/cowboy/src/cowboy_http2.erl	/^headers_frame(State, StreamID, IsFin, Headers, PseudoHeaders, BodyLen) ->$/;"	f	module:cowboy_http2
@@ -4699,7 +4699,7 @@ init	deps/ranch/src/ranch_conns_sup.erl	/^init(Parent, Ref, Transport, Protocol)
 init	deps/ranch/src/ranch_listener_sup.erl	/^init({Ref, Transport, Protocol}) ->$/;"	f	module:ranch_listener_sup
 init	deps/ranch/src/ranch_server.erl	/^init([]) ->$/;"	f	module:ranch_server
 init	deps/ranch/src/ranch_sup.erl	/^init([]) ->$/;"	f	module:ranch_sup
-init	lib/current_time.ex	/^  def init(options), do: options #one liner do: no end$/;"	f	module:CurrentTime	access:public
+init	lib/current_time.ex	/^  def init(options), do: options$/;"	f	module:CurrentTime	access:public
 init_dir	deps/cowboy/src/cowboy_static.erl	/^init_dir(Req, Path, HowToAccess, Extra) ->$/;"	f	module:cowboy_static
 init_dir	deps/cowboy/src/cowboy_static.erl	/^init_dir(Req, Path, HowToAccess, Extra) when is_list(Path) ->$/;"	f	module:cowboy_static
 init_fun_plug	deps/plug/lib/plug/builder.ex	/^  defp init_fun_plug(plug, opts, guards) do$/;"	f	module:MyPlug	access:private
