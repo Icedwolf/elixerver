@@ -6146,6 +6146,7 @@ path	deps/plug/lib/plug/static.ex	/^  defp path(from, segments), do: Path.join([
 path	deps/plug/lib/plug/static.ex	/^  defp path({app, from}, segments) when is_atom(app) and is_binary(from),$/;"	f	module:InvalidPathError	access:private
 path	deps/plug/lib/plug/upload.ex	/^  defp path(prefix, tmp) do$/;"	f	module:Upload	access:private
 path_info	deps/cowboy/src/cowboy_req.erl	/^path_info(#{path_info := PathInfo}) ->$/;"	f	module:cowboy_req
+path_info	lib/http/adapter.ex	/^  defp path_info(full_path) do$/;"	f	module:PlugAdapter	access:private
 path_to_iodata	deps/plug_cowboy/lib/plug/cowboy/translator.ex	/^  defp path_to_iodata(path, ""), do: path$/;"	f	module:Translator	access:private
 path_to_iodata	deps/plug_cowboy/lib/plug/cowboy/translator.ex	/^  defp path_to_iodata(path, qs), do: [path, ??, qs]$/;"	f	module:Translator	access:private
 payload	deps/plug/lib/plug/conn/adapter.ex	/^  @type payload :: term$/;"	y	module:Adapter	access:public
@@ -15156,6 +15157,9 @@ qs_vals	deps/cowlib/src/cow_qs.erl	/^-type qs_vals() :: [{binary(), binary() | t
 query_param	deps/plug/lib/plug/conn.ex	/^  @type query_param :: binary | %{binary => query_param} | [query_param]$/;"	y	module:Conn	access:public
 query_params	deps/plug/lib/plug/conn.ex	/^  @type query_params :: %{binary => query_param}$/;"	y	module:Conn	access:public
 query_string	deps/plug/lib/plug/conn.ex	/^  @type query_string :: String.t()$/;"	y	module:Conn	access:public
+query_string	lib/http/adapter.ex	/^  defp query_string([_, query_string]), do: query_string$/;"	f	module:PlugAdapter	access:private
+query_string	lib/http/adapter.ex	/^  defp query_string([_]), do: ""$/;"	f	module:PlugAdapter	access:private
+query_string	lib/http/adapter.ex	/^  defp query_string(full_path) do$/;"	f	module:PlugAdapter	access:private
 queue_data	deps/cowlib/src/cow_http2_machine.erl	/^queue_data(Stream=#stream{local_buffer=Q0, local_buffer_size=Size0}, IsFin, Data, In) ->$/;"	f	module:cow_http2_machine
 quote_if_buffer	deps/plug/lib/plug/router/utils.ex	/^  defp quote_if_buffer(identifier, "", context, _fun) do$/;"	f	module:Utils	access:private
 quote_if_buffer	deps/plug/lib/plug/router/utils.ex	/^  defp quote_if_buffer(identifier, _buffer, context, fun) do$/;"	f	module:Utils	access:private
@@ -15237,6 +15241,7 @@ read_req_body	deps/plug/lib/plug/conn/adapter.ex	/^  @callback read_req_body(pay
 read_req_body	deps/plug_cowboy/lib/plug/cowboy/conn.ex	/^  def read_req_body(req, opts) do$/;"	f	module:Conn	access:public
 read_req_body	deps/plug_cowboy/lib/plug/cowboy/conn.ex	/^  defp read_req_body(req, _opts, _length, acc) do$/;"	f	module:Conn	access:private
 read_req_body	deps/plug_cowboy/lib/plug/cowboy/conn.ex	/^  defp read_req_body(req, opts, length, acc) when length >= 0 do$/;"	f	module:Conn	access:private
+read_request	lib/http.ex	/^  def read_request(request, acc \\\\ %{headers: []}) do #takes socket and will be called from di/;"	f	module:Http	access:public
 read_size	deps/ranch/src/ranch_transport.erl	/^read_size(0, _Sent, ChunkSize) ->$/;"	f	module:ranch_transport
 read_size	deps/ranch/src/ranch_transport.erl	/^read_size(Bytes, Sent, ChunkSize) ->$/;"	f	module:ranch_transport
 read_urlencoded_body	deps/cowboy/src/cowboy_req.erl	/^read_urlencoded_body(Req) ->$/;"	f	module:cowboy_req

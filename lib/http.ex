@@ -23,6 +23,25 @@ defmodule Http do
     :gen_tcp.close(socket)
   end
 
+  def read_request(request, acc \\ %{headers: []}) do #takes socket and will be called from dispatch
+    case :gen_tcp.recv(request, 0) do
+      {:ok, {:http_request, :GET, {:abs_path, full_path}, _}} ->
+        read_request(request, Map.put(acc, :full_path, full_path))
+
+      {:ok, :http_eoh} ->
+        acc
+
+      {:ok, {:http_header, _, key, value}} ->
+        read_request(
+          request,
+          Map.put(acc, :headers, [{String.downcase(to_string(key)), value} | acc.headers])
+        )
+
+      {:ok, line} ->
+        read_request(request, acc)
+    end
+  end
+
   def child_spec(opts) do
     %{id: Http, start: {Http, :start_link, [opts]}}
   end
